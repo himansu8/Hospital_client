@@ -1,0 +1,190 @@
+.admindashboard {
+  background-color: #f8f8f8;
+  /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .header {
+    margin-bottom: 20px;
+
+    h1 {
+      color: #333;
+      /* Dark gray for header */
+      font-size: 28px;
+      text-transform: uppercase;
+      /* Uppercase for header text */
+      letter-spacing: 2px;
+      /* Increased letter spacing */
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .stat {
+        background-color: #fff;
+        /* White background for stats */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: calc(33.33% - 20px);
+
+        h2 {
+          color: #00aaff;
+          /* Light blue for stat titles */
+          font-size: 22px;
+          margin-bottom: 10px;
+          font-weight: bold;
+          /* Bold font weight for stat titles */
+        }
+
+        p {
+          color: #444;
+          /* Dark gray for stat content */
+          font-size: 18px;
+        }
+      }
+    }
+
+    .summary {
+      background-color: #fff;
+      /* White background for summary */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+
+      h2 {
+        color: #00aaff;
+        /* Light blue for summary title */
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        /* Bold font weight for summary title */
+      }
+
+      p {
+        color: #444;
+        /* Dark gray for summary content */
+        font-size: 18px;
+      }
+    }
+
+    .current-time {
+      margin-top: 50px;
+
+      h2 {
+        color: #00aaff;
+        /* Light blue for current time title */
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        /* Bold font weight for current time title */
+        animation: pulse 1s infinite alternate;
+      }
+
+      p {
+        color: #444;
+        /* Dark gray for current time content */
+        font-size: 22px;
+        animation: fadeIn 1s;
+      }
+    }
+  }
+
+  .searchPatient {
+    margin-bottom: 10px;
+
+    input[type='text'] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      /* Light gray border */
+      margin-right: 10px;
+      width: 200px;
+    }
+
+    .searchBtn {
+      padding: 10px 20px;
+      background-color: #00aaff;
+      /* Light blue for button background */
+      color: #fff;
+      /* White text color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      /* Smooth transition for background color */
+
+      &:hover {
+        background-color: #0077cc;
+        /* Darker blue on hover */
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      .stats {
+        .stat {
+          width: calc(50% - 20px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      .stats {
+        .stat {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sm-f-24 {
+    font-size: 24px !important;
+    height: 120px !important;
+  }
+
+  .logo {
+    overflow-y: hidden;
+    height: 400px;
+  }
+}

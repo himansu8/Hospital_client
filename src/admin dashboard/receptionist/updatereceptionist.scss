@@ -1,0 +1,67 @@
+// receptionist-update-form.scss
+
+// Define breakpoints for responsiveness
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
+// Define common styles
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$error-color: #dc3545;
+
+// Define SCSS styles for the component
+.receptionist-update-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: $breakpoint-tablet) {
+  .receptionist-update-form {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .receptionist-update-form {
+    max-width: 90%;
+  }
+}

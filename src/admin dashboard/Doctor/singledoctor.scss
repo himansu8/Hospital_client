@@ -1,0 +1,54 @@
+.single-doctor-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    overflow-x: auto;
+  }
+  
+  .back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .single-doctor-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  
+  .single-doctor-table th,
+  .single-doctor-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .single-doctor-table th {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .single-doctor-table td {
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .single-doctor-table th,
+    .single-doctor-table td {
+      padding: 8px;
+      font-size: 14px;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+    }
+  }
+  

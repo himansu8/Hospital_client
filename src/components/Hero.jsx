@@ -1,0 +1,25 @@
+import React from 'react'
+
+function Hero({ title, imgUrl }) {
+  return (
+    <div className='hero container'>
+      <div className="banner">
+        <h1 style={{ color: '#4682B4' }}>{title}</h1>
+        <p>            Apna Hospital is a state-of-the-art facility dedicated
+          to providing comprehensive healthcare services with compassion and
+          expertise. Our team of skilled professionals is committed to
+          delivering personalized care tailored to each patient's needs. At
+          Apna Hospital, we prioritize your well-being, ensuring a harmonious
+          journey towards optimal health and wellness.</p>
+      </div>
+      <div className="banner">
+        <img src={imgUrl} alt='hero' className='animated-image'/>
+        <span>
+          <img src="/Vector.png" alt="vector" />
+        </span>
+      </div>
+    </div>
+  )
+}
+
+export default Hero
